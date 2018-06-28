@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ExcelExportState" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/ExcelExportStateService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8080/ExcelExportStateService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/ExcelExportStateService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ExcelServiceLibrary" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IExcelExportState_SetStateCacheName_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStateCacheName" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_SetStateCacheName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStateCacheNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_GetStateCacheName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateCacheName" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_GetStateCacheName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateCacheNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_RemoveTimeoutCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveTimeoutCache" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_RemoveTimeoutCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveTimeoutCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_SetSessionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSessionData" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_SetSessionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSessionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_ChangeExportState_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeExportState" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_ChangeExportState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeExportStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_GetSessionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSessionData" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_GetSessionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSessionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_IsSessionDataStateCompleted_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsSessionDataStateCompleted" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_IsSessionDataStateCompleted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsSessionDataStateCompletedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_Pop_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pop" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_Pop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_NewGuid_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewGuid" />
+  </wsdl:message>
+  <wsdl:message name="IExcelExportState_NewGuid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewGuidResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IExcelExportState">
+    <wsdl:operation name="SetStateCacheName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExcelExportState/SetStateCacheName" message="tns:IExcelExportState_SetStateCacheName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExcelExportState/SetStateCacheNameResponse" message="tns:IExcelExportState_SetStateCacheName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStateCacheName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExcelExportState/GetStateCacheName" message="tns:IExcelExportState_GetStateCacheName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExcelExportState/GetStateCacheNameResponse" message="tns:IExcelExportState_GetStateCacheName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveTimeoutCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExcelExportState/RemoveTimeoutCache" message="tns:IExcelExportState_RemoveTimeoutCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExcelExportState/RemoveTimeoutCacheResponse" message="tns:IExcelExportState_RemoveTimeoutCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSessionData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExcelExportState/SetSessionData" message="tns:IExcelExportState_SetSessionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExcelExportState/SetSessionDataResponse" message="tns:IExcelExportState_SetSessionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeExportState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExcelExportState/ChangeExportState" message="tns:IExcelExportState_ChangeExportState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExcelExportState/ChangeExportStateResponse" message="tns:IExcelExportState_ChangeExportState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExcelExportState/GetSessionData" message="tns:IExcelExportState_GetSessionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExcelExportState/GetSessionDataResponse" message="tns:IExcelExportState_GetSessionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsSessionDataStateCompleted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExcelExportState/IsSessionDataStateCompleted" message="tns:IExcelExportState_IsSessionDataStateCompleted_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExcelExportState/IsSessionDataStateCompletedResponse" message="tns:IExcelExportState_IsSessionDataStateCompleted_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExcelExportState/Pop" message="tns:IExcelExportState_Pop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExcelExportState/PopResponse" message="tns:IExcelExportState_Pop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewGuid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExcelExportState/NewGuid" message="tns:IExcelExportState_NewGuid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExcelExportState/NewGuidResponse" message="tns:IExcelExportState_NewGuid_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IExcelExportState" type="tns:IExcelExportState">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetStateCacheName">
+      <soap:operation soapAction="http://tempuri.org/IExcelExportState/SetStateCacheName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStateCacheName">
+      <soap:operation soapAction="http://tempuri.org/IExcelExportState/GetStateCacheName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveTimeoutCache">
+      <soap:operation soapAction="http://tempuri.org/IExcelExportState/RemoveTimeoutCache" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSessionData">
+      <soap:operation soapAction="http://tempuri.org/IExcelExportState/SetSessionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeExportState">
+      <soap:operation soapAction="http://tempuri.org/IExcelExportState/ChangeExportState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionData">
+      <soap:operation soapAction="http://tempuri.org/IExcelExportState/GetSessionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsSessionDataStateCompleted">
+      <soap:operation soapAction="http://tempuri.org/IExcelExportState/IsSessionDataStateCompleted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pop">
+      <soap:operation soapAction="http://tempuri.org/IExcelExportState/Pop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewGuid">
+      <soap:operation soapAction="http://tempuri.org/IExcelExportState/NewGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExcelExportState">
+    <wsdl:port name="BasicHttpBinding_IExcelExportState" binding="tns:BasicHttpBinding_IExcelExportState">
+      <soap:address location="http://localhost:8080/ExcelExportStateService.svc/ExcelService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
